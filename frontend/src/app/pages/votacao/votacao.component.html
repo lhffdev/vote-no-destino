@@ -1,0 +1,77 @@
+<div class="container d-flex align-items-center justify-content-center">
+  <div class="d-flex">
+    <ng-container *ngIf="etapa === 'iniciarVotacao'">
+      <div class="btn-iniciar-votacao rounded d-flex align-items-center justify-content-center" (click)="iniciarVotacao()">
+        Iniciar votação
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="etapa === 'votacaoIniciada'">
+      <div *ngIf="buscandoDestinos" class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only"></span>
+      </div>
+
+      <ng-container *ngIf="destinosSorteados">
+        <div class="d-flex flex-column">
+          <p class="mb-3">Para votar basta clicar sobre a cidade que desejar ou se quiser desistir <a (click)="cancelar()">click aqui</a>.</p>
+
+          <div class="d-flex">
+            <div class="card" (click)="votar(destinosSorteados[0])">
+              <img src="https://www.estudokids.com.br/wp-content/uploads/2020/02/o-que-e-paisagem.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{destinosSorteados[0].nome}}</h5>
+                <p class="card-text" style="font-size: 10pt;">{{destinosSorteados[0].descricao}}</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center ml-5 mr-5">
+              <span style="font-size: 25pt;">X</span>
+            </div>
+
+            <div class="card" (click)="votar(destinosSorteados[1])">
+              <img src="https://www.todoestudo.com.br/wp-content/uploads/2015/03/paisagem-natural-1024x679.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{destinosSorteados[1].nome}}</h5>
+                <p class="card-text" style="font-size: 10pt;">{{destinosSorteados[1].descricao}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="etapa === 'solicitarDadosUsuario'">
+      <div class="d-flex flex-column">
+        <p class="mb-3">Para finalizar a votação informe seu nome e email.</p>
+
+        <form style="width: 400px;" [formGroup]="formUsuario">
+          <input formControlName="nome" type="text" class="form-control" [ngClass]="{'is-invalid': verificaValidTouched('nome') || (formSubmitted && campoFormUsuario('nome').errors)}" placeholder="Nome">
+          <div *ngIf="verificaValidTouched('nome') || formSubmitted" class="invalid-feedback d-block">
+            <div *ngIf="campoFormUsuario('nome').errors?.required">Nome é obrigatório.</div>
+            <div *ngIf="campoFormUsuario('nome').errors?.minlength">Nome deve conter no mínimo 3 caracteres.</div>
+            <div *ngIf="campoFormUsuario('nome').errors?.maxlength">Nome deve conter no máximo 150 caracteres.</div>
+          </div>
+          <input formControlName="email" type="email" class="form-control mt-2" [ngClass]="{'is-invalid': verificaValidTouched('email') || (formSubmitted && campoFormUsuario('email').errors)}" placeholder="Email">
+          <div *ngIf="verificaValidTouched('email') || formSubmitted" class="invalid-feedback d-block">
+            <div *ngIf="campoFormUsuario('email').errors?.required">Email é obrigatório.</div>
+            <div *ngIf="campoFormUsuario('email').errors?.email">O email informado é inválido.</div>
+          </div>
+
+          <button type="submit" class="btn btn-secondary btn-block mt-4" (click)="salvarVotacao()">Salvar</button>
+          <button type="button" class="btn btn-light btn-block border mt-2" (click)="cancelar()">Cancelar</button>
+        </form>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="etapa === 'salvandoVotacao'">
+      <div class="d-flex align-items-center">
+        <span class="mr-3" style="font-size: 20pt;">Salvando a votação</span>
+        <div class="spinner-border" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <app-modal-alert></app-modal-alert>
+</div>

@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "Paris",
+    "descricao": "Paris, a capital da França, é uma importante cidade europeia e um centro mundial de arte, moda, gastronomia e cultura. Sua paisagem urbana do século XIX é cortada por avenidas largas e pelo rio Sena. A cidade é conhecida por monumentos como a Torre Eiffel e a Catedral de Notre-Dame, uma construção gótica do século XII, sendo famosa também pela cultura dos cafés e por lojas de estilistas famosos na Rue du Faubourg Saint-Honoré."
+  },
+  {
+    "nome": "Nova York",
+    "descricao": "A cidade de Nova York compreende 5 distritos situados no encontro do rio Hudson com o Oceano Atlântico. No centro da cidade fica Manhattan, um distrito com alta densidade demográfica que está entre os principais centros comerciais, financeiros e culturais do mundo. Entre seus pontos emblemáticos, destacam-se arranha-céus, como o Empire State Building, e o enorme Central Park. O teatro da Broadway fica em meio às luzes de neon da Times Square."
+  },
+  {
+    "nome": "Londres",
+    "descricao": "Londres, capital da Inglaterra e do Reino Unido, é uma cidade do século 21 com uma história que remonta à era romana. Seu centro abriga as sedes imponentes do Parlamento, a famosa torre do relógio do Big Ben e a Abadia de Westminster, local de coroação dos monarcas britânicos. Do outro lado do rio Tâmisa, a roda gigante London Eye tem vista panorâmica do complexo cultural da margem sul e de toda a cidade."
+  },
+  {
+    "nome": "Veneza",
+    "descricao": "Veneza, a capital da região de Vêneto, no norte da Itália, é formada por mais de 100 pequenas ilhas em uma lagoa no Mar Adriático. A cidade não tem estradas, apenas canais (como a via Grand Canal), repletos de palácios góticos e renascentistas. Na praça central, Piazza San Marco, ficam a Basílica de São Marcos, coberta de mosaicos bizantinos, e o campanário, com vista para os telhados vermelhos da cidade."
+  },
+  {
+    "nome": "Vancouver",
+    "descricao": "Vancouver, uma movimentada cidade portuária na costa oeste da Colúmbia Britânica, está entre as cidades mais densas e etnicamente diversas do Canadá. Um local muito procurado para gravações de filmes, ela é cercada por montanhas e tem um próspero cenário artístico, teatral e musical. A Galeria de Arte de Vancouver é conhecida pelas obras de artistas regionais, enquanto o Museu de Antropologia abriga coleções importantes das Primeiras Nações."
+  }
+]

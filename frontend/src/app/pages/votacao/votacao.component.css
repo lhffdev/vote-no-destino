@@ -1,0 +1,29 @@
+.container {
+  min-height: 100%;
+}
+
+.btn-iniciar-votacao {
+  width: 350px;
+  height: 100px;
+  color: white;
+  background-color: #343a40;
+  box-shadow: 5px 5px 10px grey;
+  cursor: pointer;
+  font-size: 15pt;
+}
+
+.card {
+  width: 18rem;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px grey;
+    border: none;
+}
+
+.btn-secondary {
+  background-color: #343a40;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline !important;
+}
