@@ -27,3 +27,8 @@ a {
   cursor: pointer;
   text-decoration: underline !important;
 }
+
+img {
+  width: 288px;
+  height: 216px;
+}

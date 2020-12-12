@@ -17,7 +17,7 @@
 
           <div class="d-flex">
             <div class="card" (click)="votar(destinosSorteados[0])">
-              <img src="https://www.estudokids.com.br/wp-content/uploads/2020/02/o-que-e-paisagem.jpg" class="card-img-top">
+              <img [src]="imagemUrl(destinosSorteados[0].nome)" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">{{destinosSorteados[0].nome}}</h5>
                 <p class="card-text" style="font-size: 10pt;">{{destinosSorteados[0].descricao}}</p>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="card" (click)="votar(destinosSorteados[1])">
-              <img src="https://www.todoestudo.com.br/wp-content/uploads/2015/03/paisagem-natural-1024x679.jpg" class="card-img-top">
+              <img [src]="imagemUrl(destinosSorteados[1].nome)" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">{{destinosSorteados[1].nome}}</h5>
                 <p class="card-text" style="font-size: 10pt;">{{destinosSorteados[1].descricao}}</p>

@@ -12,9 +12,9 @@ import { ModalAlertComponent } from 'src/app/components/modal-alert/modal-alert.
 })
 export class VotacaoComponent implements OnInit {
 
-  formUsuario;
-  destinos;
-  destinosSorteados;
+  formUsuario = null;
+  destinos = null;
+  destinosSorteados = null;
   buscandoDestinos = false;
   etapa = 'iniciarVotacao';
   formSubmitted = false;
@@ -100,11 +100,18 @@ export class VotacaoComponent implements OnInit {
     this.inicializarDestinos();
     this.formUsuario.reset();
     this.formSubmitted = false;
+    this.destinos = null;
+    this.destinosSorteados = null;
+    this.buscandoDestinos = false;
   }
 
   inicializarDestinos() {
     this.destinos.forEach(destino => {
       destino.selecionado = false;
     });
+  }
+
+  imagemUrl(nomeDestino) {
+    return `/assets/${nomeDestino}.jpg`
   }
 }

@@ -57,3 +57,6 @@ frontend/npm-debug.log
 frontend/testem.log
 frontend/typings/
 frontend/yarn-error.log
+
+package-lock.json
+yarn.lock
