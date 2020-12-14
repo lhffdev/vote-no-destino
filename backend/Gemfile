@@ -11,6 +11,8 @@ gem 'rack-cors', '~> 1.1'
 
 group :development, :test do
   gem 'pry-meta', '~> 0.0.10'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
+  gem 'ffaker'
 end
 
 group :development do
